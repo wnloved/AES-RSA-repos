@@ -88,7 +88,8 @@ Padding
 
 ✅ Возможность использования чужих публичных ключей
 
-Быстрый старт RSA
+### Быстрый старт RSA
+```
 python
 from RSA_class import RSA
 
@@ -134,20 +135,24 @@ ciphertext = aes.encrypt("Привет, получатель!", mode='CBC')
 restored_key = receiver_rsa.decode(encrypted_aes_key)
 aes_receiver = AES(restored_key, AES.createSblock(42), AES.invSblock(AES.createSblock(42)))
 plaintext = aes_receiver.decrypt(ciphertext, mode='CBC')
+```
 📦 Установка
 Клонируйте репозиторий:
 
-bash
+```bash
 git clone https://github.com/yourusername/AES-RSA-repos.git
 cd AES-RSA-repos
+```
 Убедитесь, что используете Python 3.8 или выше:
 
-bash
+```bash
 python --version
+```
 Запустите примеры:
 
-bash
+```bash
 python crypto_test.py
+```
 📄 Лицензия
 Этот проект распространяется под лицензией MIT.
 Используйте в образовательных целях, но не применяйте в продакшене.
